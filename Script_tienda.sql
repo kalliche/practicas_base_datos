@@ -1,0 +1,6 @@
+CREATE TABLE productos(
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	nombre TEXT,
+	marca_id INTEGER,
+	precio REAL
+);
