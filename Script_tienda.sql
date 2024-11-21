@@ -40,4 +40,15 @@ SELECT p.id, p.nombre, m.id, m.nombre
 FROM productos p 
 RIGHT JOIN marcas m ON p.marca_id = m.id;
 
+--LEFT
+SELECT p.id, p.nombre, m.nombre, m.id
+FROM productos p 
+LEFT JOIN marcas m ON p.marca_id = m.id;
+
+--FULL OUTER 
+SELECT  p.id, p.nombre, m.nombre, m.id
+FROM productos p 
+FULL OUTER JOIN marcas m ON p.marca_id = m.id;
+
+
 
