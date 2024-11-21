@@ -12,3 +12,32 @@ SELECT * FROM productos p;
 
 INSERT INTO productos (nombre, marca_id, precio)
 	VALUES ('Smartplone', 2, 800.00),('Table', 1, 400.00);
+
+
+CREATE TABLE marcas (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	nombre TEXT
+);
+
+INSERT INTO marcas (nombre)
+	VALUES ('Dell'), ('Apple'), ('Samsung');
+
+SELECT * FROM marcas m;
+
+--JOIN
+--INNER
+SELECT * 
+FROM productos p
+INNER JOIN marcas m ON productos.marca_id = marcas.id;
+
+SELECT p.id, p.nombre, m.nombre
+FROM productos p 
+INNER JOIN marcas m ON p.marca_id = m.id;
+
+
+--RIGHT
+SELECT p.id, p.nombre, m.id, m.nombre
+FROM productos p 
+RIGHT JOIN marcas m ON p.marca_id = m.id;
+
+
