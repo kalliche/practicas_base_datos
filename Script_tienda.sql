@@ -28,7 +28,7 @@ SELECT * FROM marcas m;
 --INNER
 SELECT * 
 FROM productos p
-INNER JOIN marcas m ON productos.marca_id = marcas.id;
+INNER JOIN marcas m ON p.marca_id = m.id;
 
 SELECT p.id, p.nombre, m.nombre
 FROM productos p 
